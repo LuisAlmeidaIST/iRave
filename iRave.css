@@ -1,0 +1,62 @@
+@charset "utf-8";
+body {
+
+background:url(../Desktop/trick-hearing-your-friends-better-loud-clubs-concerts-and-having-them-hear-you.1280x600.jpg) no-repeat center center fixed;
+
+background-size: cover;
+
+}
+
+relogio {
+	position: absolute;
+	top: 40%;
+	left: 45%;
+	background-color: white;
+	width: 3.81cm;
+	height: 3.81cm;
+	padding: 1px;
+	border: 5px solid black;
+	margin: 1px;
+	overflow: auto;
+	text-align:center;
+}
+horas{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000000;
+	position:relative;
+	top:25%;
+}
+
+button1{
+	background-color:black;
+	position:absolute;
+	width: 0.25cm;
+	height: 0.5cm;
+	left: 44.5%;
+	top: 59%;
+}
+button2{
+	background-color:black;
+	position:absolute;
+	width: 0.25cm;
+	height: 0.5cm;
+	left: 56.5%;
+	top: 43%;
+}
+button3{
+	background-color:black;
+	position:absolute;
+	width: 0.25cm;
+	height: 0.5cm;
+	left: 56.5%;
+	top: 51%;
+}
+button4{
+	background-color:black;
+	position:absolute;
+	width: 0.25cm;
+	height: 0.5cm;
+	left: 56.5%;
+	top: 59%;
+}
+
