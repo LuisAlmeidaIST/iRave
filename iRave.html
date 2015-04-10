@@ -9,15 +9,23 @@
 
 
 <body onload="startTime()">
-<butoes-relo>
-	<button1 type="button"></button1>
-    <button2 type="button"></button2>
-    <button3 type="button"></button3>
-    <button4 type="button"></button4>
-</butoes-relo>
-<relogio>
-<horas id="txt"></horas> 
+<botoes-relo>
+	<button id="button1" class="button1" type="button" onclick="colapseCaixa()"></button>
+    <button id="button2" class="button2" type="button"></button>
+    <button id="button3" class="button3" type="button"></button>
+    <button id="button4" class="button4" type="button"></button>
+</botoes-relo>
 
+<relogio>
+<div id="menu" style="position:relative;visibility:hidden">
+	<button class="menu-bot" type="button">Notificações</button>
+    <button class="menu-bot" type="button">Mute</button>
+    <button class="menu-bot" type="button">Humor</button>
+</div>
+<div id="caixa1">
+  <horas id="txt"></horas>
+  </img><img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%">
+  </div>
 </relogio>
 </body>
 </html>
