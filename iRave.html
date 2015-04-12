@@ -10,21 +10,33 @@
 
 <body onload="startTime()">
 <botoes-relo>
-	<button id="button1" class="button1" type="button" onclick="colapseCaixa()"></button>
+	<button id="button1" class="button1" type="button" onclick="colapseCaixa(backs())"></button>
     <button id="button2" class="button2" type="button"></button>
     <button id="button3" class="button3" type="button"></button>
     <button id="button4" class="button4" type="button"></button>
 </botoes-relo>
 
 <relogio>
-<div id="menu" style="position:relative;visibility:hidden">
+<div id="menu" style="position:relative;display:none;">
 	<button class="menu-bot" type="button">Notificações</button>
-    <button class="menu-bot" type="button">Mute</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixa(2)">Mute</button>
     <button class="menu-bot" type="button">Humor</button>
 </div>
-<div id="caixa1">
+
+<div id="humor" style="position:relative;display:none;">
+	<button class="menu-bot" type="button" onClick="colapseCaixa(3)">Estado</button>
+    <button class="menu-bot" type="button">Estatisticas</button>
+    <button class="menu-bot" type="button">Emergência</button>
+</div>
+
+<div id="estado" style="position:relative;display:none;">
+    <h2> Está FELIZ!!!</h2>
+    <img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%"></img>
+</div>
+
+<div id="caixa1" style="display:inline;">
   <horas id="txt"></horas>
-  </img><img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%">
+  <img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%"></img>
   </div>
 </relogio>
 </body>

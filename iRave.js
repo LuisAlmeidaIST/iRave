@@ -1,4 +1,4 @@
-var estado=1;
+var estado=0;
 function startTime() {
     var today=new Date();
     var h=today.getHours();
@@ -15,17 +15,38 @@ function checkTime(i) {
     return i;
 }
 
-function colapseCaixa(){
+function colapseAll(){
+		document.getElementById("menu").style.display="none";
+		document.getElementById("caixa1").style.display="none";
+		document.getElementById("humor").style.display="none";
+		document.getElementById("estado").style.display="none";
+}
+function backs(){
 	if(estado==0){
-		document.getElementById("caixa1").style.visibility='visible';
-		document.getElementById("menu").style.visibility='hidden';
 		estado++;
+		return estado;
 	}
-	else{
-		if(estado==1) {
-			document.getElementById("caixa1").style.visibility='hidden';
-			document.getElementById("menu").style.visibility='visible';
-			estado--;
-		}
+	else
+		return estado-1;
+}
+function colapseCaixa(i){
+	colapseAll();
+	switch (i){
+		case 0:
+		document.getElementById("caixa1").style.display="inline";
+		estado=0;
+		break;
+		case 1:
+		document.getElementById("menu").style.display="inline";
+		estado=1;
+		break;
+		case 2:
+		document.getElementById("humor").style.display="inline";
+		estado=2;
+		break;
+		case 3:
+		document.getElementById("estado").style.display="inline";
+		estado=3;
+		break;
 	}
 }
