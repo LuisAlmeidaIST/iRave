@@ -1,4 +1,7 @@
 var estado=0;
+var prev =0;
+var voltar = 1;
+
 function startTime() {
     var today=new Date();
     var h=today.getHours();
@@ -20,33 +23,146 @@ function colapseAll(){
 		document.getElementById("caixa1").style.display="none";
 		document.getElementById("humor").style.display="none";
 		document.getElementById("estado").style.display="none";
+		document.getElementById("estatisticas").style.display="none";
+		document.getElementById("emergencia").style.display="none";
+		document.getElementById("emergencia-s").style.display="none";
 }
 function backs(){
-	if(estado==0){
+	if(voltar==0){
+		prev= estado;
 		estado++;
-		return estado;
+		return voltar;
 	}
 	else
-		return estado-1;
+		return voltar;
 }
+
+function getEstado(){
+	return estado;
+}
+
 function colapseCaixa(i){
 	colapseAll();
+	prev = estado;
 	switch (i){
 		case 0:
 		document.getElementById("caixa1").style.display="inline";
+		prev= estado;
 		estado=0;
+		voltar=1;
 		break;
 		case 1:
 		document.getElementById("menu").style.display="inline";
+		prev= estado;
 		estado=1;
+		voltar=0;
 		break;
 		case 2:
 		document.getElementById("humor").style.display="inline";
+		prev= estado;
 		estado=2;
+		voltar=1;
 		break;
 		case 3:
 		document.getElementById("estado").style.display="inline";
+		prev= estado;
 		estado=3;
+		voltar=2;
 		break;
+		case 4:
+		document.getElementById("estatisticas").style.display="inline";
+		prev= estado;
+		estado=3;
+		voltar=2;
+		break;
+		case 5:
+		document.getElementById("emergencia").style.display="inline";
+		prev= estado;
+		estado=3;
+		voltar=2;
+		break;
+		case 6:
+		document.getElementById("emergencia-s").style.display="inline";
+		prev= estado;
+		estado=0;
+		voltar=0;
+		break;
+	}
+}
+
+function colapseCaixaBut1(i){
+	prev= estado;
+	switch (i){
+		case 0:
+		colapseAll();
+		document.getElementById("caixa1").style.display="inline";
+		prev= estado;
+		estado=0;
+		voltar=1;
+		break;
+		case 2:
+		colapseAll();
+		document.getElementById("estado").style.display="inline";
+		prev= estado;
+		estado=3;
+		voltar=2;
+		break;
+	}
+}
+
+function colapseCaixaBut2(i){
+	prev= estado;
+	switch (i){
+		case 0:
+		colapseAll();
+		document.getElementById("caixa1").style.display="inline";
+		prev= estado;
+		estado=0;
+		voltar=1;
+		break;
+		case 2:
+		colapseAll();
+		document.getElementById("estatisticas").style.display="inline";
+		prev= estado;
+		estado=4;
+		voltar=2;
+		break;
+		case 5:
+		colapseAll();
+		document.getElementById("emergencia-s").style.display="inline";
+		prev= estado;
+		estado=0;
+		voltar=0;
+		break;
+	}
+}
+function colapseCaixaBut3(i){
+	
+	switch (i){
+		case 0:
+		colapseAll();
+		document.getElementById("caixa1").style.display="inline";
+		prev= estado;
+		estado=0;
+		voltar=1;
+		break;
+		case 1:
+		colapseAll();
+		document.getElementById("humor").style.display="inline";
+		prev= estado;
+		estado=2;
+		voltar=1;
+		break;
+		case 2:
+		colapseAll();
+		document.getElementById("emergencia").style.display="inline";
+		prev = estado;
+		estado=5;
+		voltar=prev;
+		break;
+		case 5:
+		colapseCaixa(prev);
+		break;
+	
 	}
 }
