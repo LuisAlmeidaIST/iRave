@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="iRave.css">
+<style type="text/css">
+.smile {
+	position: absolute;
+	z-index: 1;
+	left: 544px;
+	top: 318px;
+}
+</style>
 <script src="iRave.js"></script> 
 <title>iRAve</title>
 </head>
@@ -18,30 +26,35 @@
 
 <relogio>
 <div id="menu" style="position:relative;display:none;">
+	<horas-menu class="txt"></horas-menu>
 	<button class="menu-bot" type="button">Notificações</button>
     <button class="menu-bot" type="button">Mute</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Humor</button>
 </div>
 
 <div id="humor" style="position:relative;display:none;">
+	<horas-menu class="txt"></horas-menu>
 	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Estado</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Estatisticas</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Emergência</button>
 </div>
 
 <div id="estado" style="position:relative;display:none;">
-   <horas> <p>Está FELIZ!!!</p></horas>
-   <p> <img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%"></img></p>
+   <horas-menu class="txt"></horas-menu>
+   <estado style="top:50%"> <p>Está FELIZ!!!</p></estado>
+   <p> <img src="resources/Happy.png" id="smile" style="position:relative;top:50%;"></img></p>
 </div>
 
 <div id="estatisticas" style="position:relative;display:none;">
-   <estado> <p>Feliz 85%</p></estado>
-   <estado> <p>Triste 15%</p></estado>
-   <estado> <p>0 Casos de Emergência</p></estado>
+   <horas-menu class="txt"></horas-menu>
+   <esta> <p>Feliz 85%</p></esta>
+   <esta> <p>Triste 15%</p></esta>
+   <esta> <p>0 Casos de Emergência</p></esta>
 </div>
 
 <div id="emergencia" style="position:relative;display:none;">
-  <estado> Tem a certeza que quer ajuda??!! </estado>
+  <horas-menu class="txt"></horas-menu>
+  <certeza><p>Tem a certeza que quer mesmo ajuda??!!</p></certeza>
   <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Sim!!!</button>
   <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Não!!!</button>
 </div>
@@ -51,9 +64,10 @@
 </div>
 
 <div id="caixa1" style="display:inline;">
-  <horas id="txt"></horas>
-  <img src="resources/Happy.png" id="smile" style="position:absolute;top:50%;right:30%"></img>
+  <horas class="txt"></horas>
+ <img src="resources/Happy.png" alt="" width="42" height="41" style="position:absolute;top:50%;left:40%;"class="smile"/>
   </div>
 </relogio>
+
 </body>
 </html>
