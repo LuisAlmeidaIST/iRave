@@ -3,19 +3,11 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="iRave.css">
-<style type="text/css">
-.smile {
-	position: absolute;
-	z-index: 1;
-	left: 544px;
-	top: 318px;
-}
-</style>
 <script src="iRave.js"></script> 
 <title>iRAve</title>
 </head>
 
-
+<img src="resources/m400_black_550x600_46.png"alt="" width="268" height="308" style="width: 237px; height: 264px; position: absolute;"/>
 <body onload="startTime()">
 <botoes-relo>
 	<button id="button1" class="button1" type="button" onclick="colapseCaixa(backs())"></button>
@@ -41,33 +33,34 @@
 
 <div id="estado" style="position:relative;display:none;">
    <horas-menu class="txt"></horas-menu>
-   <estado style="top:50%"> <p>Está FELIZ!!!</p></estado>
-   <p> <img src="resources/Happy.png" id="smile" style="position:relative;top:50%;"></img></p>
+   <estado style="top:10%;"> <br>Está FELIZ!!!</estado>
+   <img src="resources/Happy.png" id="smile" style="position:relative;top:20%;"</img>
+  
 </div>
 
 <div id="estatisticas" style="position:relative;display:none;">
    <horas-menu class="txt"></horas-menu>
-   <esta> <p>Feliz 85%</p></esta>
-   <esta> <p>Triste 15%</p></esta>
-   <esta> <p>0 Casos de Emergência</p></esta>
+   <esta><br>Feliz 85%</esta>
+   <esta><br>Triste 15%</esta>
+   <esta><br>0 Casos de Emergência</esta>
 </div>
 
 <div id="emergencia" style="position:relative;display:none;">
   <horas-menu class="txt"></horas-menu>
-  <certeza><p>Tem a certeza que quer mesmo ajuda??!!</p></certeza>
+  <certeza><p>Decerteza que quer ajuda!?!</p></certeza>
   <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Sim!!!</button>
   <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Não!!!</button>
 </div>
 
 <div id="emergencia-s" style="position:relative;display:none;">
-  <estado> <h2>AJUDA A CAMINHO </h2> </estado>
+  <estado> <h3>AJUDA A CAMINHO </h3> </estado>
+  <horas-menu id="ajuda-horas">hola</horas-menu>
 </div>
 
-<div id="caixa1" style="display:inline;">
+<div id="caixa1" style="position:relative;display:inline;">
   <horas class="txt"></horas>
- <img src="resources/Happy.png" alt="" width="42" height="41" style="position:absolute;top:50%;left:40%;"class="smile"/>
+ <img src="resources/Happy.png" alt="" width="42" height="41"  class="smile"/>
   </div>
 </relogio>
-
 </body>
 </html>

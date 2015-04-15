@@ -2,6 +2,15 @@ var estado=0;
 var prev =0;
 var voltar = 1;
 
+function getsTime(){
+	var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+	document.getElementById("ajuda-horas").innerHTML=h+":"+m+":"+s;
+}
 function startTime() {
     var today=new Date();
     var h=today.getHours();
@@ -12,7 +21,7 @@ function startTime() {
 	var items = document.getElementsByClassName("txt");
 	var len,i;
 	for (i = 0, len = items.length; i < len; i++) {
-    items[i].innerHTML =h+":"+m+":"+s;;
+    items[i].innerHTML =h+":"+m+":"+s;
 	}
     var t = setTimeout(function(){startTime()},500);
 }
@@ -134,12 +143,14 @@ function colapseCaixaBut2(i){
 		case 5:
 		colapseAll();
 		document.getElementById("emergencia-s").style.display="inline";
+		getsTime();
 		prev= estado;
 		estado=0;
 		voltar=0;
 		break;
 	}
 }
+
 function colapseCaixaBut3(i){
 	
 	switch (i){

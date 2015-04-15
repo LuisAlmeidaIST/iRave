@@ -1,70 +1,66 @@
 @charset "utf-8";
-body {
-
-background:url(resources/trick-hearing-your-friends-better-loud-clubs-concerts-and-having-them-hear-you.1280x600.jpg) no-repeat center center fixed;
-
-background-size: cover;
-
-}
 
 relogio {
 	position: absolute;
-	top: 40%;
-	left: 45%;
+	top: 22.2%;
+	left: 21.5%;
 	background-color: white;
 	width: 2.7cm;
 	height: 2.7cm;
 	padding: 1px;
-	border: 5px solid black;
 	margin: 1px;
 	overflow: auto;
 	text-align:center;
 	line-height: 1;
 }
 horas{
-	position:absolute;
+	position:relative;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000000;
-	
-	top:25%;
+	top:60%;
 }
 
 .button1{
-	background-color:black;
+	background-color:transparent;
 	position:absolute;
 	width: 0.25cm;
 	height: 0.5cm;
-	left: 44%;
-	top: 59%;
+	border:0;
+	left: 17%;
+	top: 48%;
+	
 }
 .button2{
-	background-color:black;
+	background-color:transparent;
 	position:absolute;
 	width: 0.25cm;
 	height: 0.5cm;
-	left: 56.5%;
-	top: 45.5%;
+	border:0;
+	left: 53%;
+	top: 22.5%;
 }
 .button3{
-	background-color:black;
+	background-color:transparent;
 	position:absolute;
 	width: 0.25cm;
 	height: 0.5cm;
-	left: 56.5%;
-	top: 52%;
+	border:0;
+	left: 53.3%;
+	top: 35%;
 }
 .button4{
-	background-color:black;
+	background-color:transparent;
 	position:absolute;
 	width: 0.25cm;
 	height: 0.5cm;
-	left: 56.5%;
-	top: 59%;
+	border:0;
+	left: 53%;
+	top: 47.5%;
 }
 .menu-bot{
 		position:relative;
-		width:3.81cm;
-		height:1.10cm;
+		width:2.7cm;
+		height:0.76cm;
 }
 
 estado{
@@ -74,18 +70,22 @@ estado{
 esta{
 	position:relative;
 	top:10%;
+  	margin-bottom: 20px;
+  	font-size:11.7px;
+  	font-size:15px;
 }
 
 p {
   margin-top: 0.2em;
-  margin-bottom: 0.4em;
-  font-size:12.7px;
+  margin-bottom: 0.3em;
+  font-size:11.7px;
 }
+
 horas-menu{
 	position:relative;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000000;
-	font-size:17px;
+	font-size:15px;
 	text-align:center;
 }
 
