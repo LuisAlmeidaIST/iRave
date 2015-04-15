@@ -14,8 +14,6 @@ function startTime() {
 	for (i = 0, len = items.length; i < len; i++) {
     items[i].innerHTML =h+":"+m+":"+s;;
 	}
-	//document.getElementById("txt").innerHTML= h+":"+m+":"+s;
-	//document.getElementById("txts").innerHTML = h+":"+m+":"+s;
     var t = setTimeout(function(){startTime()},500);
 }
 
