@@ -19,8 +19,8 @@
 <relogio>
 <div id="menu" style="position:relative;display:none;">
 	<horas-menu class="txt"></horas-menu>
-	<button class="menu-bot" type="button">Notificações</button>
-    <button class="menu-bot" type="button">Mute</button>
+	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Notificações</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Mute</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Humor</button>
 </div>
 
@@ -29,6 +29,20 @@
 	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Estado</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Estatisticas</button>
     <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Emergência</button>
+</div>
+
+<div id="mute" style="position:relative;display:none;">
+	<horas-menu class="txt"></horas-menu>
+	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Todos</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Palcos</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Pessoas</button>
+</div>
+
+<div id="noti" style="position:relative;display:none;">
+	<horas-menu class="txt"></horas-menu>
+	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Palcos</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Bandas</button>
+    <button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Estilos</button>
 </div>
 
 <div id="estado" style="position:relative;display:none;">

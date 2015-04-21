@@ -39,6 +39,8 @@ function colapseAll(){
 		document.getElementById("estatisticas").style.display="none";
 		document.getElementById("emergencia").style.display="none";
 		document.getElementById("emergencia-s").style.display="none";
+		document.getElementById("mute").style.display="none";
+		document.getElementById("noti").style.display="none";
 }
 function backs(){
 	if(voltar==0){
@@ -113,6 +115,14 @@ function colapseCaixaBut1(i){
 		estado=0;
 		voltar=1;
 		break;
+		case 1:
+		colapseAll();
+		document.getElementById("noti").style.display="inline";
+		getsTime();
+		prev= estado;
+		estado=7;
+		voltar=1;
+		break;
 		case 2:
 		colapseAll();
 		document.getElementById("estado").style.display="inline";
@@ -139,6 +149,14 @@ function colapseCaixaBut2(i){
 		prev= estado;
 		estado=4;
 		voltar=2;
+		break;
+		case 1:
+		colapseAll();
+		document.getElementById("mute").style.display="inline";
+		getsTime();
+		prev= estado;
+		estado=6;
+		voltar=1;
 		break;
 		case 5:
 		colapseAll();
