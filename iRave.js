@@ -412,8 +412,8 @@ function colapseCaixaBut3(i){
 		colapseCaixa(prev);
 		break;
 	    case 9:
-	        mute(2);
-	        break;
+	    mute(2);
+	    break;
 	    case 7:
 	        colapseAll();
 	        document.getElementById("historico").style.display = "inline";
@@ -444,6 +444,9 @@ function colapseCaixaBut3(i){
 function get_historico(){
     if (announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9 || announcement_banda == 4 || announcement_banda == 1 || announcement_banda == 6 || announcement_banda == 9 || announcement_estilo == 4 || announcement_estilo == 3 || announcement_estilo == 8 || announcement_estilo == 9) {
         document.getElementById("historial").innerHTML = "Concerto de Steve Aoki no palco Mundo em 5 minutos!";
+    }
+    else {
+        document.getElementById("historial").innerHTML = "Nao tem novidades";
     }
 }
 
