@@ -75,12 +75,9 @@ function colapseAll(){
 		document.getElementById("historico").style.display = "none";
 		document.getElementById("noti-add").style.display = "none";
 		document.getElementById("palco").style.display = "none";
-<<<<<<< HEAD
 		document.getElementById("mut-palcos").style.display = "none";
-=======
 		document.getElementById("bandas").style.display = "none";
 		document.getElementById("estilos").style.display = "none";
->>>>>>> origin/master
 }
 function backs(){
 	if(voltar==0){
@@ -245,7 +242,6 @@ function colapseCaixaBut1(i){
 	    case 8:
 	        mute(1);
 	        break;
-<<<<<<< HEAD
 		case 7:
 			colapseAll();
 			document.getElementById("noti-add").style.display = "inline";
@@ -256,21 +252,12 @@ function colapseCaixaBut1(i){
 	    case 9:
 	        mute(2);
 	        break;
-		case 20:
-			colapseAll();
-			document.getElementById("palco").style.display = "inline";
-			prev = estado;
-			estado = 22;
-			voltar = 20;
-			break;
-=======
 	    case 20:
 	        colapseAll();
 	        document.getElementById("palco").style.display = "inline";
 	        prev = estado;
 	        estado = 24;
 	        voltar = 20;
->>>>>>> origin/master
 	        break;
 	    case 22:
 	        notify_style(1);
@@ -281,7 +268,6 @@ function colapseCaixaBut1(i){
 	    case 24:
 	        notify_stage(1);
 	        break;
->>>>>>> origin/master
 	}
 }
 
@@ -318,7 +304,6 @@ function colapseCaixaBut2(i){
 		estado=0;
 		voltar=0;
 		break;
-<<<<<<< HEAD
 		case 8:
 			colapseAll();
 			document.getElementById("mut-palcos").style.display = "inline";
@@ -332,7 +317,24 @@ function colapseCaixaBut2(i){
 			estado = 20;
 			voltar = 7;
 			break;
-	}
+
+        case 20:
+            colapseAll();
+            document.getElementById("bandas").style.display = "inline";
+            prev = estado;
+            estado = 23;
+            voltar = 20;
+            break;
+        case 22:
+            notify_style(2);
+            break;
+        case 23:
+            notify_band(2);
+            break;
+        case 24:
+            notify_stage(2);
+            break;
+    }
 }
 
 function mute(h) {
@@ -376,126 +378,12 @@ function mute(h) {
             case 3:
 	}
 }
-function notify_stage(f) {
-	switch(f){
-		case 1:
-			if(announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9){
-				announcement_palco -= 1;
-				document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-				document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-				document.getElementById("b_p_1").style.background = "#007dc1";
-			}
-			else {
-				announcement_palco += 1;
-				document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-				document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-				document.getElementById("b_p_1").style.background = "#d0451b";
-			}
-			break;
-		case 2:
-			if (announcement_palco == 4 || announcement_palco == 3 || announcement_palco == 8 || announcement_palco == 9) {
-				announcement_palco -= 3;
-				document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-				document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-				document.getElementById("b_p_2").style.background = "#007dc1";
-			}
-			else {
-				announcement_palco += 3;
-				document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-				document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-				document.getElementById("b_p_2").style.background = "#d0451b";
-			}
-			break;
-		case 3:
-			if (announcement_palco == 6 || announcement_palco == 5 || announcement_palco == 8 || announcement_palco == 9) {
-				announcement_palco -= 5;
-				document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-				document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-				document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-				document.getElementById("b_p_3").style.background = "#007dc1";
-			}
-			else {
-				announcement_palco += 5;
-				document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-				document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-				document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-				document.getElementById("b_p_3").style.background = "#d0451b";
-			}
-			break;
-	}
-}
 
 
 
 
-=======
-	    case 6:
-	        snd1.volume = 0.5;
-	        snd2.volume = 0;
-=======
-		    colapseAll();
-		    document.getElementById("emergencia-s").style.display="inline";
-		    getsTime();
-		    prev= estado;
-		    estado=0;
-		    voltar=0;
-		    break;
-	    case 7:
-	        colapseAll();
-	        document.getElementById("noti-add").style.display = "inline";
-	        prev = estado;
-	        estado = 20;
-	        voltar = 7;
->>>>>>> origin/master
-	        break;
-	    case 20:
-	        colapseAll();
-	        document.getElementById("bandas").style.display = "inline";
-	        prev = estado;
-	        estado = 23;
-	        voltar = 20;
-	        break;
-	    case 22:
-	        notify_style(2);
-	        break;
-	    case 23:
-	        notify_band(2);
-	        break;
-	    case 24:
-	        notify_stage(2);
-	        break;
-	}
-}
 
->>>>>>> origin/master
+
 function colapseCaixaBut3(i){
 	
 	switch (i){
@@ -523,24 +411,9 @@ function colapseCaixaBut3(i){
 		case 5:
 		colapseCaixa(prev);
 		break;
-<<<<<<< HEAD
-		case 7:
-			colapseAll();
-			document.getElementById("historico").style.display = "inline";
-			prev = estado;
-			estado = 21;
-			voltar = 7;
-			break;
-
 	    case 9:
 	        mute(2);
-=======
-<<<<<<< HEAD
-	    case 6:
-	        snd1.volume = 0;
-	        snd2.volume = 1;
 	        break;
-=======
 	    case 7:
 	        colapseAll();
 	        document.getElementById("historico").style.display = "inline";
@@ -548,7 +421,6 @@ function colapseCaixaBut3(i){
 	        prev = estado;
 	        estado = 21;
 	        voltar = 7;
->>>>>>> origin/master
 	        break;
 	    case 20:
 	        colapseAll();
@@ -566,8 +438,6 @@ function colapseCaixaBut3(i){
 	    case 24:
 	        notify_stage(3);
 	        break;
-
-	
 	}
 }
 
