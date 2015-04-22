@@ -1,6 +1,32 @@
 var estado=0;
 var prev =0;
 var voltar = 1;
+var todos = 0;
+var palco = 0;
+var pessoas = 0;
+
+
+var snd1 = new Audio();
+var src1 = document.createElement("source");
+src1.type = "audio/ogg";
+src1.src = 'resources/sound1.ogg';
+snd1.appendChild(src1);
+
+var snd2 = new Audio();
+var src2 = document.createElement("source");
+src2.type = "audio/ogg";
+src2.src = 'resources/sound2.ogg';
+snd2.appendChild(src2);
+
+
+snd1.loop = true;
+snd1.play();
+snd1.volume = 0.5;
+
+snd2.loop = true;
+snd2.play();
+snd2.volume = 1;
+
 
 function getsTime(){
 	var today=new Date();
@@ -55,6 +81,38 @@ function backs(){
 function getEstado(){
 	return estado;
 }
+
+var scrolled = 0;
+
+$(document).ready(function () {
+
+
+	$("#downClick").on("click", function () {
+		scrolled = scrolled + 20;
+
+		$(".cover").animate({
+			scrollTop: scrolled
+		});
+
+	});
+
+
+	$("#upClick").on("click", function () {
+		scrolled = scrolled - 20;
+
+		$(".cover").animate({
+			scrollTop: scrolled
+		});
+
+	});
+
+
+	$(".clearValue").on("click", function () {
+		scrolled = 0;
+	});
+
+
+});
 
 var clicked = false, clickY;
 $(document).on({
@@ -150,6 +208,10 @@ function colapseCaixaBut1(i){
 		estado=3;
 		voltar=2;
 		break;
+	    case 6:
+	        snd1.volume = 0;
+	        snd2.volume = 0;
+	        break;
 	}
 }
 
@@ -186,6 +248,10 @@ function colapseCaixaBut2(i){
 		estado=0;
 		voltar=0;
 		break;
+	    case 6:
+	        snd1.volume = 0.5;
+	        snd2.volume = 0;
+	        break;
 	}
 }
 
@@ -216,6 +282,10 @@ function colapseCaixaBut3(i){
 		case 5:
 		colapseCaixa(prev);
 		break;
+	    case 6:
+	        snd1.volume = 0;
+	        snd2.volume = 1;
+	        break;
 	
 	}
 }
