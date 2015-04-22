@@ -41,9 +41,33 @@
 
 <div id="noti" style="position:relative;display:none;">
 	<horas-menu class="txt"></horas-menu>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Palcos</button>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Bandas</button>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Estilos</button>
+	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Adicionar</button>
+    <button class="menu-bot" type="button" onclick="colapseCaixaBut2(getEstado())">Remover</button>
+	<button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Historico</button>
+</div>
+
+<div id="noti-add" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <button class="menu-bot" type="button" onclick="colapseCaixaBut1(getEstado())">Palcos</button>
+    <button class="menu-bot" type="button" onclick="colapseCaixaBut2(getEstado())">Bandas</button>
+    <button class="menu-bot" type="button" onclick="colapseCaixaBut3(getEstado())">Estilos</button>
+</div>
+
+<div id="palco" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <button class="menu-list" id="b_p_1" type="button" onclick="notify_stage(1)">Mundo</button>
+    <button class="menu-list" id="b_p_2" type="button" onclick="notify_stage(2)">Electro</button>
+    <button class="menu-list" id="b_p_3" type="button" onclick="notify_stage(3)">Rock</button>
+</div>
+
+<div id="bandas" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <button class="menu-bot" type="button"><img src="resources/Happy.png"></button>
+</div>
+
+<div id="estilos" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <button class="menu-bot" type="button"><img src="resources/Happy.png"></button>
 </div>
 
 <div id="estado" style="position:relative;display:none;">
@@ -51,6 +75,11 @@
    <estado style="top:0%;"><br> Está FELIZ!!!</estado>
    <img src="resources/Happy.png" id="smile" style="position:relative;top:10%;"</img>
   
+</div>
+
+<div id="historico" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <historico/>
 </div>
 
 <div id="estatisticas" style="position:relative;display:none;">
