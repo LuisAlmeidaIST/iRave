@@ -290,9 +290,18 @@ function colapseCaixaBut1(i){
 	        colapseAll();
 	        document.getElementById("palco").style.display = "inline";
 	        prev = estado;
-	        estado = 22;
+	        estado = 24;
 	        voltar = 20;
 >>>>>>> origin/master
+	        break;
+	    case 22:
+	        notify_style(1);
+	        break;
+	    case 23:
+	        notify_band(1);
+	        break;
+	    case 24:
+	        notify_stage(1);
 	        break;
 	}
 }
@@ -354,8 +363,17 @@ function colapseCaixaBut2(i){
 	        colapseAll();
 	        document.getElementById("bandas").style.display = "inline";
 	        prev = estado;
-	        estado = 22;
+	        estado = 23;
 	        voltar = 20;
+	        break;
+	    case 22:
+	        notify_style(2);
+	        break;
+	    case 23:
+	        notify_band(2);
+	        break;
+	    case 24:
+	        notify_stage(2);
 	        break;
 	}
 }
@@ -407,6 +425,15 @@ function colapseCaixaBut3(i){
 	        prev = estado;
 	        estado = 22;
 	        voltar = 20;
+	        break;
+	    case 22:
+	        notify_style(3);
+	        break;
+	    case 23:
+	        notify_band(3);
+	        break;
+	    case 24:
+	        notify_stage(3);
 	        break;
 
 >>>>>>> origin/master
