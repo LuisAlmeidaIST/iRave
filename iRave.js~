@@ -312,13 +312,13 @@ function colapseCaixaBut2(i){
 		voltar=0;
 		break;
 		case 8:
-			if(palco == 0){
+			if(palcos == 0){
 				snd1.volume = .5;
 				if(pessoas == 1){
 					todos = 1;
 					document.getElementById("mute1").style.background = "#007dc1";
 				}
-				palco = 1;
+				palcos = 1;
 				document.getElementById("palcos1").style.background = "#007dc1";
 			}else{
 				colapseAll();
@@ -383,7 +383,7 @@ function mute_rest(h) {
 	            snd1.volume = 0;
 	            pessoas = 1;
 	            todos = 0;
-	            palco = 0;
+	            palcos = 0;
 	            snd2.volume = 1;
 	            colapseCaixa(backs());
 	        break;
