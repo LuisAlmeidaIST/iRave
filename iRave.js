@@ -76,6 +76,8 @@ function colapseAll(){
 		document.getElementById("historico").style.display = "none";
 		document.getElementById("noti-add").style.display = "none";
 		document.getElementById("palco").style.display = "none";
+		document.getElementById("bandas").style.display = "none";
+		document.getElementById("estilos").style.display = "none";
 }
 function backs(){
 	if(voltar==0){
@@ -348,88 +350,15 @@ function colapseCaixaBut2(i){
 	        voltar = 7;
 >>>>>>> origin/master
 	        break;
+	    case 20:
+	        colapseAll();
+	        document.getElementById("bandas").style.display = "inline";
+	        prev = estado;
+	        estado = 22;
+	        voltar = 20;
+	        break;
 	}
 }
-
-function notify_stage(f) {
-    switch(f){
-        case 1:
-            if(announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9){
-                announcement_palco -= 1;
-                document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_1").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 1;
-                document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_1").style.background = "#d0451b";
-            }
-            break;
-        case 2:
-            if (announcement_palco == 4 || announcement_palco == 3 || announcement_palco == 8 || announcement_palco == 9) {
-                announcement_palco -= 3;
-                document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_2").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 3;
-                document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_2").style.background = "#d0451b";
-            }
-            break;
-        case 3:
-            if (announcement_palco == 6 || announcement_palco == 5 || announcement_palco == 8 || announcement_palco == 9) {
-                announcement_palco -= 5;
-                document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_3").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 5;
-                document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_3").style.background = "#d0451b";
-            }
-            break;
-    }
-}
-
-
-
 
 function colapseCaixaBut3(i){
 	
@@ -467,12 +396,135 @@ function colapseCaixaBut3(i){
 	    case 7:
 	        colapseAll();
 	        document.getElementById("historico").style.display = "inline";
+	        get_historico();
 	        prev = estado;
 	        estado = 21;
 	        voltar = 7;
+	        break;
+	    case 20:
+	        colapseAll();
+	        document.getElementById("estilos").style.display = "inline";
+	        prev = estado;
+	        estado = 22;
+	        voltar = 20;
 	        break;
 
 >>>>>>> origin/master
 	
 	}
 }
+
+function get_historico(){
+    if (announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9 || announcement_banda == 4 || announcement_banda == 1 || announcement_banda == 6 || announcement_banda == 9 || announcement_estilo == 4 || announcement_estilo == 3 || announcement_estilo == 8 || announcement_estilo == 9) {
+        document.getElementById("historial").innerHTML = "Concerto de Steve Aoki no palco Mundo em 5 minutos!";
+    }
+}
+
+function notify_style(f) {
+    switch (f) {
+        case 1:
+            if (announcement_estilo == 4 || announcement_estilo == 1 || announcement_estilo == 6 || announcement_estilo == 9) {
+                announcement_estilo -= 1;
+                document.getElementById("b_s_1").style.background = "#007dc1";
+            }
+            else {
+                announcement_estilo += 1;
+                document.getElementById("b_s_1").style.background = "#d0451b";
+            }
+            break;
+        case 2:
+            if (announcement_estilo == 4 || announcement_estilo == 3 || announcement_estilo == 8 || announcement_estilo == 9) {
+                announcement_estilo -= 3;
+                document.getElementById("b_s_2").style.background = "#007dc1";
+            }
+            else {
+                announcement_estilo += 3;
+                document.getElementById("b_s_2").style.background = "#d0451b";
+            }
+            break;
+        case 3:
+            if (announcement_estilo == 6 || announcement_estilo == 5 || announcement_estilo == 8 || announcement_estilo == 9) {
+                announcement_estilo -= 5;
+                document.getElementById("b_s_3").style.background = "#007dc1";
+            }
+            else {
+                announcement_estilo += 5;
+                document.getElementById("b_s_3").style.background = "#d0451b";
+            }
+            break;
+
+    }
+}
+
+function notify_stage(f) {
+    switch (f) {
+        case 1:
+            if (announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9) {
+                announcement_palco -= 1;
+                document.getElementById("b_p_1").style.background = "#007dc1";
+            }
+            else {
+                announcement_palco += 1;
+                document.getElementById("b_p_1").style.background = "#d0451b";
+            }
+            break;
+        case 2:
+            if (announcement_palco == 4 || announcement_palco == 3 || announcement_palco == 8 || announcement_palco == 9) {
+                announcement_palco -= 3;
+                document.getElementById("b_p_2").style.background = "#007dc1";
+            }
+            else {
+                announcement_palco += 3;
+                document.getElementById("b_p_2").style.background = "#d0451b";
+            }
+            break;
+        case 3:
+            if (announcement_palco == 6 || announcement_palco == 5 || announcement_palco == 8 || announcement_palco == 9) {
+                announcement_palco -= 5;
+                document.getElementById("b_p_3").style.background = "#007dc1";
+            }
+            else {
+                announcement_palco += 5;
+                document.getElementById("b_p_3").style.background = "#d0451b";
+            }
+            break;
+
+    }
+}
+
+function notify_band(f) {
+    switch (f) {
+        case 1:
+            if (announcement_banda == 4 || announcement_banda == 1 || announcement_banda == 6 || announcement_banda == 9) {
+                announcement_banda -= 1;
+                document.getElementById("b_b_1").style.background = "#007dc1";
+            }
+            else {
+                announcement_banda += 1;
+                document.getElementById("b_b_1").style.background = "#d0451b";
+            }
+            break;
+        case 2:
+            if (announcement_banda == 4 || announcement_banda == 3 || announcement_banda == 8 || announcement_banda == 9) {
+                announcement_banda -= 3;
+                document.getElementById("b_b_2").style.background = "#007dc1";
+            }
+            else {
+                announcement_banda += 3;
+                document.getElementById("b_b_2").style.background = "#d0451b";
+            }
+            break;
+        case 3:
+            if (announcement_banda == 6 || announcement_banda == 5 || announcement_banda == 8 || announcement_banda == 9) {
+                announcement_banda -= 5;
+                document.getElementById("b_b_3").style.background = "#007dc1";
+            }
+            else {
+                announcement_banda += 5;
+                document.getElementById("b_b_3").style.background = "#d0451b";
+            }
+            break;
+
+    }
+}
+
