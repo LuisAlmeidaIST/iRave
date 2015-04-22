@@ -4,31 +4,31 @@ var voltar = 1;
 
 function getsTime(){
 	var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();
+	m = checkTime(m);
+	s = checkTime(s);
 	document.getElementById("ajuda-horas").innerHTML=h+":"+m+":"+s;
 }
 function startTime() {
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();
+	m = checkTime(m);
+	s = checkTime(s);
 	var items = document.getElementsByClassName("txt");
 	var len,i;
 	for (i = 0, len = items.length; i < len; i++) {
-    items[i].innerHTML =h+":"+m+":"+s;
+	items[i].innerHTML =h+":"+m+":"+s;
 	}
-    var t = setTimeout(function(){startTime()},500);
+	var t = setTimeout(function(){startTime()},500);
 }
 
 function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
+	if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+	return i;
 }
 
 function colapseAll(){
@@ -54,6 +54,26 @@ function backs(){
 
 function getEstado(){
 	return estado;
+}
+
+var clicked = false, clickY;
+$(document).on({
+	'mousemove': function(e) {
+		clicked && updateScrollPos(e);
+	},
+	'mousedown': function(e) {
+		clicked = true;
+		clickY = e.pageY;
+	},
+	'mouseup': function() {
+		clicked = false;
+		$('html').css('cursor', 'auto');
+	}
+});
+
+var updateScrollPos = function(e) {
+	$('html').css('cursor', 'row-resize');
+	$(window).scrollTop($(window).scrollTop() + (clickY - e.pageY));
 }
 
 function colapseCaixa(i){
