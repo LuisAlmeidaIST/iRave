@@ -1,8 +1,8 @@
 var estado=0;
 var prev =0;
 var voltar = 1;
-<<<<<<< HEAD
-var todos = 0;
+
+var todos = 1;
 var palco = 0;
 var pessoas = 0;
 
@@ -28,11 +28,10 @@ snd2.loop = true;
 snd2.play();
 snd2.volume = 1;
 
-=======
 var announcement_palco = 0;
 var announcement_banda = 0;
 var announcement_estilo = 0;
->>>>>>> origin/master
+
 
 function getsTime(){
 	var today=new Date();
@@ -76,6 +75,7 @@ function colapseAll(){
 		document.getElementById("historico").style.display = "none";
 		document.getElementById("noti-add").style.display = "none";
 		document.getElementById("palco").style.display = "none";
+		document.getElementById("mut-palcos").style.display = "none";
 }
 function backs(){
 	if(voltar==0){
@@ -95,8 +95,6 @@ var scrolled = 0;
 
 $(document).ready(function () {
 
-
-<<<<<<< HEAD
 	$("#downClick").on("click", function () {
 		scrolled = scrolled + 20;
 
@@ -120,33 +118,6 @@ $(document).ready(function () {
 	$(".clearValue").on("click", function () {
 		scrolled = 0;
 	});
-=======
-    $("#downClick").on("click", function () {
-        scrolled = scrolled + 20;
-
-        $(".cover").animate({
-            scrollTop: scrolled
-        });
-
-    });
-
-
-    $("#upClick").on("click", function () {
-        scrolled = scrolled - 20;
-
-        $(".cover").animate({
-            scrollTop: scrolled
-        });
-
-    });
-
-
-    $(".clearValue").on("click", function () {
-        scrolled = 0;
-    });
->>>>>>> origin/master
-
-
 });
 
 var clicked = false, clickY;
@@ -174,62 +145,70 @@ function colapseCaixa(i){
 	prev = estado;
 	switch (i){
 		case 0:
-		    document.getElementById("caixa1").style.display="inline";
-		    prev= estado;
-		    estado=0;
-		    voltar=1;
+			document.getElementById("caixa1").style.display="inline";
+			prev= estado;
+			estado=0;
+			voltar=1;
 		break;
 		case 1:
-		    document.getElementById("menu").style.display="inline";
-		    prev= estado;
-		    estado=1;
-		    voltar=0;
+			document.getElementById("menu").style.display="inline";
+			prev= estado;
+			estado=1;
+			voltar=0;
 		break;
 		case 2:
-		    document.getElementById("humor").style.display="inline";
-		    prev= estado;
-		    estado=2;
-		    voltar=1;
+			document.getElementById("humor").style.display="inline";
+			prev= estado;
+			estado=2;
+			voltar=1;
 		break;
 		case 3:
-		    document.getElementById("estado").style.display="inline";
-		    prev= estado;
-		    estado=3;
-		    voltar=2;
+			document.getElementById("estado").style.display="inline";
+			prev= estado;
+			estado=3;
+			voltar=2;
 		break;
 		case 4:
-		    document.getElementById("estatisticas").style.display="inline";
-		    prev= estado;
-		    estado=3;
-		    voltar=2;
+			document.getElementById("estatisticas").style.display="inline";
+			prev= estado;
+			estado=3;
+			voltar=2;
 		break;
 		case 5:
-		    document.getElementById("emergencia").style.display="inline";
-		    prev= estado;
-		    estado=3;
-		    voltar=2;
+			document.getElementById("emergencia").style.display="inline";
+			prev= estado;
+			estado=3;
+			voltar=2;
 		break;
 		case 6:
-		    document.getElementById("emergencia-s").style.display="inline";
-		    prev= estado;
-		    estado=0;
-		    voltar=0;
+			document.getElementById("emergencia-s").style.display="inline";
+			prev= estado;
+			estado=0;
+			voltar=0;
+			break;
+		case 8:
+			colapseAll();
+			document.getElementById("mute").style.display = "inline";
+			getsTime();
+			prev = estado;
+			estado = 8;
+			voltar = 1;
+			break;
+		case 7:
+			colapseAll();
+			document.getElementById("noti").style.display = "inline";
+			getsTime();
+			prev = estado;
+			estado = 7;
+			voltar = 1;
 		break;
-	    case 7:
-	        colapseAll();
-	        document.getElementById("noti").style.display = "inline";
-	        getsTime();
-	        prev = estado;
-	        estado = 7;
-	        voltar = 1;
-	    break;
-        case 20:
-	        colapseAll();
-	        document.getElementById("noti-add").style.display = "inline";
-	        prev = estado;
-	        estado = 20;
-	        voltar = 7;
-	    break;
+		case 20:
+			colapseAll();
+			document.getElementById("noti-add").style.display = "inline";
+			prev = estado;
+			estado = 20;
+			voltar = 7;
+		break;
 	}
 }
 
@@ -237,14 +216,13 @@ function colapseCaixaBut1(i){
 	prev= estado;
 	switch (i){
 		case 0:
-		    colapseAll();
-		    document.getElementById("caixa1").style.display="inline";
-		    prev= estado;
-		    estado=0;
-		    voltar=1;
-		    break;
+			colapseAll();
+			document.getElementById("caixa1").style.display="inline";
+			prev= estado;
+			estado=0;
+			voltar=1;
+			break;
 		case 1:
-<<<<<<< HEAD
 		colapseAll();
 		document.getElementById("noti").style.display="inline";
 		getsTime();
@@ -259,39 +237,26 @@ function colapseCaixaBut1(i){
 		estado=3;
 		voltar=2;
 		break;
-	    case 6:
-	        snd1.volume = 0;
-	        snd2.volume = 0;
-=======
-		    colapseAll();
-		    document.getElementById("noti").style.display="inline";
-		    getsTime();
-		    prev= estado;
-		    estado=7;
-		    voltar=1;
-		    break;
-	    case 2:
-	        colapseAll();
-	        document.getElementById("estado").style.display = "inline";
-	        prev = estado;
-	        estado = 3;
-	        voltar = 2;
+	    case 8:
+	        mute(1);
 	        break;
-	    case 7:
-	        colapseAll();
-	        document.getElementById("noti-add").style.display = "inline";
-	        prev = estado;
-	        estado = 20;
-	        voltar = 7;
+		case 7:
+			colapseAll();
+			document.getElementById("noti-add").style.display = "inline";
+			prev = estado;
+			estado = 20;
+			voltar = 7;
+			break;
+	    case 9:
+	        mute(2);
 	        break;
-	    case 20:
-	        colapseAll();
-	        document.getElementById("palco").style.display = "inline";
-	        prev = estado;
-	        estado = 22;
-	        voltar = 20;
->>>>>>> origin/master
-	        break;
+		case 20:
+			colapseAll();
+			document.getElementById("palco").style.display = "inline";
+			prev = estado;
+			estado = 22;
+			voltar = 20;
+			break;
 	}
 }
 
@@ -299,29 +264,28 @@ function colapseCaixaBut2(i){
 	prev= estado;
 	switch (i){
 		case 0:
-		    colapseAll();
-		    document.getElementById("caixa1").style.display="inline";
-		    prev= estado;
-		    estado=0;
-		    voltar=1;
-		    break;
+			colapseAll();
+			document.getElementById("caixa1").style.display="inline";
+			prev= estado;
+			estado=0;
+			voltar=1;
+			break;
 		case 2:
-		    colapseAll();
-		    document.getElementById("estatisticas").style.display="inline";
-		    prev= estado;
-		    estado=4;
-		    voltar=2;
-		    break;
+			colapseAll();
+			document.getElementById("estatisticas").style.display="inline";
+			prev= estado;
+			estado=4;
+			voltar=2;
+			break;
 		case 1:
-		    colapseAll();
-		    document.getElementById("mute").style.display="inline";
-		    getsTime();
-		    prev= estado;
-		    estado=6;
-		    voltar=1;
-		    break;
+			colapseAll();
+			document.getElementById("mute").style.display="inline";
+			getsTime();
+			prev= estado;
+			estado=8;
+			voltar=1;
+			break;
 		case 5:
-<<<<<<< HEAD
 		colapseAll();
 		document.getElementById("emergencia-s").style.display="inline";
 		getsTime();
@@ -329,103 +293,138 @@ function colapseCaixaBut2(i){
 		estado=0;
 		voltar=0;
 		break;
-	    case 6:
-	        snd1.volume = 0.5;
-	        snd2.volume = 0;
-=======
-		    colapseAll();
-		    document.getElementById("emergencia-s").style.display="inline";
-		    getsTime();
-		    prev= estado;
-		    estado=0;
-		    voltar=0;
-		    break;
-	    case 7:
-	        colapseAll();
-	        document.getElementById("noti-add").style.display = "inline";
-	        prev = estado;
-	        estado = 20;
-	        voltar = 7;
->>>>>>> origin/master
-	        break;
+		case 8:
+			colapseAll();
+			document.getElementById("mut-palcos").style.display = "inline";
+			estado = 9;
+			voltar = 8;
+			break;
+		case 7:
+			colapseAll();
+			document.getElementById("noti-add").style.display = "inline";
+			prev = estado;
+			estado = 20;
+			voltar = 7;
+			break;
 	}
 }
 
+function mute(h) {
+	switch (h) {
+		case 1:
+			if (todos == 0) {
+				snd1.volume = 0.5;
+				snd2.volume = 1;
+				todos = 1;
+				pessoas = 1;
+				palco = 1;
+				document.getElementById("mute1").style.background = "#007dc1";
+			}
+			else {
+				document.getElementById("mute1").style.background = "#d0451b";
+				snd1.volume = 0;
+				snd2.volume = 0;
+				pessoas = 0;
+				palco = 0;
+				todos = 0;
+			}
+			break;
+	    case 2:
+	        if (palco == 0) {
+	            document.getElementById("palcos1").style.background = "#007dc1";
+	            document.getElementById("mute1").style.background = "#d0451b";
+	            document.getElementById("pessoas1").style.background = "#d0451b";
+	            snd2.volume = 0;
+	            palco = 1;
+	            snd1.volume = 0.5;
+	            colapseCaixa(backs());
+	        }
+	        else {
+	            document.getElementById("palcos1").style.background = "#d0451b";
+	            document.getElementById("mute1").style.background = "#d0451b";
+	            snd1.volume = 0;
+	            palco = 0;
+	            colapseCaixa(backs());
+	        }
+	        break;
+            case 3:
+	}
+}
 function notify_stage(f) {
-    switch(f){
-        case 1:
-            if(announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9){
-                announcement_palco -= 1;
-                document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_1").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 1;
-                document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_1").style.background = "#d0451b";
-            }
-            break;
-        case 2:
-            if (announcement_palco == 4 || announcement_palco == 3 || announcement_palco == 8 || announcement_palco == 9) {
-                announcement_palco -= 3;
-                document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_2").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 3;
-                document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_2").style.background = "#d0451b";
-            }
-            break;
-        case 3:
-            if (announcement_palco == 6 || announcement_palco == 5 || announcement_palco == 8 || announcement_palco == 9) {
-                announcement_palco -= 5;
-                document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
-                document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
-                document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
-                document.getElementById("b_p_3").style.background = "#007dc1";
-            }
-            else {
-                announcement_palco += 5;
-                document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
-                document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
-                document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
-                document.getElementById("b_p_3").style.background = "#d0451b";
-            }
-            break;
-    }
+	switch(f){
+		case 1:
+			if(announcement_palco == 4 || announcement_palco == 1 || announcement_palco == 6 || announcement_palco == 9){
+				announcement_palco -= 1;
+				document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
+				document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
+				document.getElementById("b_p_1").style.background = "#007dc1";
+			}
+			else {
+				announcement_palco += 1;
+				document.getElementById("b_p_1").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
+				document.getElementById("b_p_1").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_1").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_1").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_1").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_1").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_1").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
+				document.getElementById("b_p_1").style.background = "#d0451b";
+			}
+			break;
+		case 2:
+			if (announcement_palco == 4 || announcement_palco == 3 || announcement_palco == 8 || announcement_palco == 9) {
+				announcement_palco -= 3;
+				document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
+				document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
+				document.getElementById("b_p_2").style.background = "#007dc1";
+			}
+			else {
+				announcement_palco += 3;
+				document.getElementById("b_p_2").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
+				document.getElementById("b_p_2").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_2").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_2").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_2").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_2").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_2").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
+				document.getElementById("b_p_2").style.background = "#d0451b";
+			}
+			break;
+		case 3:
+			if (announcement_palco == 6 || announcement_palco == 5 || announcement_palco == 8 || announcement_palco == 9) {
+				announcement_palco -= 5;
+				document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7))";
+				document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #007dc1 5%, #0061a7 100%)";
+				document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0)";
+				document.getElementById("b_p_3").style.background = "#007dc1";
+			}
+			else {
+				announcement_palco += 5;
+				document.getElementById("b_p_3").style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315))";
+				document.getElementById("b_p_3").style.background = "-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_3").style.background = "-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_3").style.background = "-o-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_3").style.background = "-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_3").style.background = "linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)";
+				document.getElementById("b_p_3").style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0)";
+				document.getElementById("b_p_3").style.background = "#d0451b";
+			}
+			break;
+	}
 }
 
 
@@ -458,21 +457,18 @@ function colapseCaixaBut3(i){
 		case 5:
 		colapseCaixa(prev);
 		break;
-<<<<<<< HEAD
-	    case 6:
-	        snd1.volume = 0;
-	        snd2.volume = 1;
-	        break;
-=======
-	    case 7:
-	        colapseAll();
-	        document.getElementById("historico").style.display = "inline";
-	        prev = estado;
-	        estado = 21;
-	        voltar = 7;
+		case 7:
+			colapseAll();
+			document.getElementById("historico").style.display = "inline";
+			prev = estado;
+			estado = 21;
+			voltar = 7;
+			break;
+
+	    case 9:
+	        mute(2);
 	        break;
 
->>>>>>> origin/master
 	
 	}
 }

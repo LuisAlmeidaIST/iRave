@@ -34,9 +34,17 @@
 
 <div id="mute" style="position:relative;display:none;">
 	<horas-menu class="txt"></horas-menu>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut1(getEstado())">Todos</button>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut2(getEstado())">Palcos</button>
-	<button class="menu-bot" type="button" onClick="colapseCaixaBut3(getEstado())">Pessoas</button>
+	<button class="menu-bot" id="mute1" type="button" onClick="colapseCaixaBut1(getEstado())">Todos</button>
+	<button class="menu-bot" id="palcos1" type="button" onClick="colapseCaixaBut2(getEstado())">Palcos</button>
+	<button class="menu-bot" id="pessoas1" type="button" onClick="colapseCaixaBut3(getEstado())">Pessoas</button>
+</div>
+
+
+
+<div id="mut-palcos" style="position:relative;display:none;">
+    <horas-menu class="txt"></horas-menu>
+    <button class="menu-bot" id="ouvir1" type="button" onclick="colapseCaixaBut1(getEstado())">Ouvir Apenas</button>
+    <button class="menu-bot"id="ouvir2" type="button" onclick="colapseCaixaBut3(getEstado())">Silenciar Este</button>
 </div>
 
 <div id="noti" style="position:relative;display:none;">
