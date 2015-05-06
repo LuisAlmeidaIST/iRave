@@ -153,7 +153,7 @@ function colapseCaixa(i){
 			}else{
 				document.getElementById("silencio").style.display="none";
 			}
-			if(warning==1){
+			if(warning > 0){
 				document.getElementById("warning").style.display="inline";
 			}else{
 				document.getElementById("warning").style.display="none";
@@ -301,6 +301,7 @@ function colapseCaixaBut2(i){
 		case 2:
 			colapseAll();
 			document.getElementById("estatisticas").style.display="inline";
+			document.getElementById("emergency").innerHTML= warning+" Casos de Emergência";
 			prev= estado;
 			estado=4;
 			voltar=2;
@@ -315,7 +316,7 @@ function colapseCaixaBut2(i){
 			break;
 		case 5:
 		colapseAll();
-		warning = 1;
+		warning ++;
 		document.getElementById("emergencia-s").style.display="inline";
 		getsTime();
 		prev= estado;

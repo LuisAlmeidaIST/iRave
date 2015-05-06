@@ -101,7 +101,7 @@
    <horas-menu class="txt"></horas-menu>
    <esta><br>Feliz 85%</esta>
    <esta><br>Triste 15%</esta><br>
-   <esta id="emergency">0 Casos de Emergência </esta>
+   <esta id="emergency"><br> 0 Casos de Emergência </esta>
 </div>
 
 <div id="emergencia" style="position:relative;display:none;">
