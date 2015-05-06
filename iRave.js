@@ -148,6 +148,11 @@ function colapseCaixa(i){
 	switch (i){
 		case 0:
 			document.getElementById("caixa1").style.display="inline";
+			if(todos==0){
+				document.getElementById("silencio").style.display="inline";
+			}else{
+				document.getElementById("silencio").style.display="none";
+			}
 			prev= estado;
 			estado=0;
 			voltar=1;
