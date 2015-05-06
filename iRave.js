@@ -1,7 +1,7 @@
 var estado=0;
 var prev =0;
 var voltar = 1;
-
+var warning = 0;
 var todos = 1;
 var palco = 1;
 var pessoas = 1;
@@ -152,6 +152,11 @@ function colapseCaixa(i){
 				document.getElementById("silencio").style.display="inline";
 			}else{
 				document.getElementById("silencio").style.display="none";
+			}
+			if(warning==1){
+				document.getElementById("warning").style.display="inline";
+			}else{
+				document.getElementById("warning").style.display="none";
 			}
 			prev= estado;
 			estado=0;
@@ -310,6 +315,7 @@ function colapseCaixaBut2(i){
 			break;
 		case 5:
 		colapseAll();
+		warning = 1;
 		document.getElementById("emergencia-s").style.display="inline";
 		getsTime();
 		prev= estado;

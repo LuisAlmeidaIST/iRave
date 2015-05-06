@@ -1,7 +1,7 @@
 var estado=0;
 var prev =0;
 var voltar = 1;
-
+var warning = 0;
 var todos = 1;
 var palco = 1;
 var pessoas = 1;
@@ -148,12 +148,22 @@ function colapseCaixa(i){
 	switch (i){
 		case 0:
 			document.getElementById("caixa1").style.display="inline";
+			if(todos==0){
+				document.getElementById("silencio").style.display="inline";
+			}else{
+				document.getElementById("silencio").style.display="none";
+			}
 			prev= estado;
 			estado=0;
 			voltar=1;
 		break;
 		case 1:
 			document.getElementById("menu").style.display="inline";
+			if(warning==1){
+				document.getElementById("warning").style.display="inline";
+			}else{
+				document.getElementById("warning").style.display="none";
+			}
 			prev= estado;
 			estado=1;
 			voltar=0;
@@ -305,6 +315,7 @@ function colapseCaixaBut2(i){
 			break;
 		case 5:
 		colapseAll();
+		warning = 1;
 		document.getElementById("emergencia-s").style.display="inline";
 		getsTime();
 		prev= estado;
@@ -312,13 +323,13 @@ function colapseCaixaBut2(i){
 		voltar=0;
 		break;
 		case 8:
-			if(palcos == 0){
+			if(palco == 0){
 				snd1.volume = .5;
 				if(pessoas == 1){
 					todos = 1;
 					document.getElementById("mute1").style.background = "#007dc1";
 				}
-				palcos = 1;
+				palco = 1;
 				document.getElementById("palcos1").style.background = "#007dc1";
 			}else{
 				colapseAll();
@@ -383,7 +394,7 @@ function mute_rest(h) {
 	            snd1.volume = 0;
 	            pessoas = 1;
 	            todos = 0;
-	            palcos = 0;
+	            palco = 0;
 	            snd2.volume = 1;
 	            colapseCaixa(backs());
 	        break;
