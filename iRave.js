@@ -153,7 +153,12 @@ function colapseCaixa(i){
 			}else{
 				document.getElementById("silencio").style.display="none";
 			}
-			if(warning > 0){
+			if (warning > 0) {
+			    var items = document.getElementsByClassName("smile");
+			    var len, i;
+			    for (i = 0, len = items.length; i < len; i++) {
+			        items[i].src = "resources/alert.png";
+			    }
 				document.getElementById("warning").style.display="inline";
 			}else{
 				document.getElementById("warning").style.display="none";
@@ -244,7 +249,10 @@ function colapseCaixaBut1(i){
 		break;
 		case 2:
 		colapseAll();
-		document.getElementById("estado").style.display="inline";
+		if (warning > 0) {
+		    document.getElementById("status").innerHTML = "MODO AJUDA";
+		}
+		document.getElementById("estado").style.display = "inline";
 		prev= estado;
 		estado=3;
 		voltar=2;
@@ -300,7 +308,12 @@ function colapseCaixaBut2(i){
 			break;
 		case 2:
 			colapseAll();
-			document.getElementById("estatisticas").style.display="inline";
+			document.getElementById("estatisticas").style.display = "inline";
+			var items = document.getElementsByClassName("smile");
+			var len, i;
+			for (i = 0, len = items.length; i < len; i++) {
+			    items[i].src = "resources/alert.png";
+			}
 			document.getElementById("emergency").innerHTML= warning+" Casos de Emergência";
 			prev= estado;
 			estado=4;
@@ -319,7 +332,7 @@ function colapseCaixaBut2(i){
 		warning ++;
 		document.getElementById("emergencia-s").style.display="inline";
 		getsTime();
-		prev= estado;
+		prev = estado;
 		estado=0;
 		voltar=0;
 		break;
@@ -627,5 +640,13 @@ function notify_band(f) {
             break;
 
     }
+function changestatus(){
+    var items = document.getElementsByClassName("smile");
+	var len,i;
+	for (i = 0, len = items.length; i < len; i++) {
+		items[i].src="resources/alert.png";
+	}
+	document.getElementById("status").innerHTML="MODO AJUDA!";
+	}
 }
 
